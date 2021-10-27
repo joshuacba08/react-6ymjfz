@@ -1,5 +1,4 @@
-import React from 'react';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getProductById } from '../helpers/getData.js';
 import ItemDetail from './ItemDetail';
 import './styles/ItemDetailContainer.css';
