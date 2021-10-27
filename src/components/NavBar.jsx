@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import './styles/NavBar.css';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({ background }) => {
   //Declaro una variable donde voy a almacenar la ruta de la imagen que quiero mostrar
@@ -25,25 +26,27 @@ const NavBar = ({ background }) => {
         <nav>
           <ul className="nav-container">
             <li>
-              <a href="/">Inicio</a>
+              <Link to="/">Inicio</Link>
             </li>
             <li className="products-item">
-              <a href="/">
+              <Link to="/products">
                 Productos <span className="arrow"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a href="/">Contacto</a>
+              <Link to="/contacto">Contacto</Link>
             </li>
           </ul>
         </nav>
 
         {/* logo de la marca */}
         <div className="logo-container">
-          <img src={brand} alt="logo" />
+          <Link to="/">
+            <img src={brand} alt="logo" />
+          </Link>
         </div>
 
         {/* cart widget */}

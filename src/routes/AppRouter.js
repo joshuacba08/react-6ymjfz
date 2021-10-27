@@ -5,12 +5,16 @@ import Home from "../pages/Home";
 import Products from "../pages/Products";
 import Footer from "../components/Footer";
 import Page404 from "../pages/Page404";
+import CartPage from "../pages/CartPage";
 
 const AppRouter = () => {
   return (
     <Router>
         <NavBar background={'transparent'} />
         <Switch>
+          <Route exact path="/cart">
+            <CartPage />
+          </Route>
           <Route exact path="/detail/:id">
             <DetailPage />
           </Route>

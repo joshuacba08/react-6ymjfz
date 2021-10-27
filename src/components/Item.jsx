@@ -5,9 +5,6 @@ import ItemCount from './ItemCount.jsx';
 import './styles/Item.css';
 
 const Item = (item) => {
-  const onAdd = (qty) => {
-    alert(`Has agregado ${qty} cervezas 🍺`);
-  };
 
   return (
     <article className="product-card">
@@ -18,7 +15,7 @@ const Item = (item) => {
       
       <span className="product-card__name">${item.price}</span>
 
-      <ItemCount stock={item.stock} onAdd={onAdd} initial={1} />
+      <ItemCount stock={item.stock} initial={1} />
     </article>
   );
 };

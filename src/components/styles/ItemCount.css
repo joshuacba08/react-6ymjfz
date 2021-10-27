@@ -8,6 +8,11 @@
   margin: 40px auto 0;
 }
 
+.count-container{
+  display: flex;
+  flex-direction: column;
+}
+
 .count-container__button {
   color: var(--primary-color);
   width: 100%;
@@ -34,4 +39,10 @@
   padding-top: 10px;
   color: var(--primary-color);
   background-color: var(--just-white);
+}
+
+.count-container .button-finalizar-compra{
+  display: block;
+  width: 180px;
+  padding: 6px 12px ;
 }
