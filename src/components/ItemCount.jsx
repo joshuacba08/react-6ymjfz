@@ -1,8 +1,8 @@
 import React from 'react';
 import { useHistory } from 'react-router';
+import { onAdd } from '../helpers/operators'; 
 
 import { useState } from 'react';
-import { onAdd } from '../helpers/operators.js';
 
 import './styles/ItemCount.css';
 
@@ -40,7 +40,7 @@ const ItemCount = ({ initial, stock }) => {
 
       <button
         className="button-primary"
-        onClick={() => {onAdd(qty); setshowButton(true); console.log(history)}}
+        onClick={() => {onAdd(qty); setshowButton(true)}}
         disabled={stock === 0 ? true : null}
       >
         Añadir

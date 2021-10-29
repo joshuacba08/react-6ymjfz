@@ -1,4 +1,4 @@
-import { useParams } from 'react-router'
+import React, { useParams } from 'react-router'
 import { Link } from 'react-router-dom';
 import ItemDetailContainer from '../components/ItemDetailContainer'
 
@@ -9,7 +9,6 @@ const DetailPage = () => {
     let { id } = useParams();
 
     id = parseInt(id);
-    console.log(id, typeof id)
 
     return (
         <main className="detail-page-container">
