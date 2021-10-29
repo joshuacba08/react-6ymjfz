@@ -1,13 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router';
-import { onAdd } from '../helpers/operators'; 
-
 import { useState } from 'react';
 
 import './styles/ItemCount.css';
 
 
-const ItemCount = ({ initial, stock }) => {
+const ItemCount = ({ initial, stock, onAdd }) => {
   //hook de estado
   const [qty, setQty] = useState(initial);
   const [showButton, setshowButton] = useState(false);
