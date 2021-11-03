@@ -1,11 +1,12 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 import './styles/Hero.css';
 
 const Hero = ({ title }) => {
-  //Declaro una variable donde voy a almacenar la ruta de la imagen que quiero mostrar
 
-  //la lógica va siempre antes del return
+  let history = useHistory();
+
   return (
     <section className="hero hero-slide-1">
       <div className="hero-container">
@@ -15,7 +16,12 @@ const Hero = ({ title }) => {
             ¡La mente muy clara y la cerveza muy fría! Vení a conocer las
             mejores cervezas del inframundo.
           </p>
-          <button className="button-primary">Comprar</button>
+          <button 
+            className="button-primary"
+            onClick={()=>history.push('/products')}
+          >
+            Comprar
+          </button>
         </article>
       </div>
     </section>

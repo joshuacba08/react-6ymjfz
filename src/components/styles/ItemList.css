@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
   justify-content: center;
-  gap: 30px 60px;
+  gap: 60px 80px;
   margin: 40px 20px;
+}
+
+.load-beer{
+  width: 100%;
 }

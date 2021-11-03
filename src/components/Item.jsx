@@ -8,7 +8,7 @@ import './styles/Item.css';
 const Item = (item) => {
 
   const cartContext = useContext(CartContext);
-  const {cart, addToCart} = cartContext;
+  const { addToCart} = cartContext;
 
   const onAdd = (qty) => {
     addToCart(item, qty)

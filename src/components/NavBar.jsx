@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import './styles/NavBar.css';
-import { Link } from 'react-router-dom';
+
 
 const NavBar = ({ background }) => {
   //Declaro una variable donde voy a almacenar la ruta de la imagen que quiero mostrar
@@ -50,7 +51,10 @@ const NavBar = ({ background }) => {
         </div>
 
         {/* cart widget */}
-        <CartWidget />
+        <Link to="/cart">
+          <CartWidget />
+        </Link>
+          
       </div>
     </header>
   );

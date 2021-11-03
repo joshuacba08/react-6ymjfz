@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 import ItemCount from './ItemCount';
 
 import './styles/ItemDetail.css';
 
 const ItemDetail = ({ item }) => {
+
+  const cartContext = useContext(CartContext);
+  const { addToCart} = cartContext;
+
   return (
     <article className="product-detail">
       <img src={item.thumbnail} alt="" className="product-detail__img" />

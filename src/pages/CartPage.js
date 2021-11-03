@@ -1,10 +1,14 @@
 import React from 'react'
+import CartListItem from '../components/CartListItem'
 
 const CartPage = () => {
+
+
     return (
-        <div>
-            <p>Dentro del cart</p>   
-        </div>
+        <main className="display-page">
+            <h1>Tu carrito de compras</h1>
+            <CartListItem />
+        </main>
     )
 }
 

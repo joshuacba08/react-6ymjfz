@@ -20,7 +20,6 @@ const CartProvider = (props) => {
             newCart.splice( index, 1, product );
 
             setCart([ ...newCart ]);
-            console.log(cart);
 
         }else{
             let product = {...item, qty};
@@ -29,9 +28,9 @@ const CartProvider = (props) => {
     }
 
     const deleteCartById = ( id ) => {
+        const newCart = [...cart];
         let index = newCart.findIndex(el => el.id === id);
         
-        const newCart = [...cart];
         newCart.splice( index, 1 );
 
         setCart([...newCart]);
@@ -48,6 +47,7 @@ const CartProvider = (props) => {
                         cart, 
                         setCart,
                         addToCart,
+                        deleteCartById,
                         deleteCart, 
                    }}
         >

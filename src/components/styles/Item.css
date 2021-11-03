@@ -9,3 +9,8 @@
 .product-card__name {
   font-size: 1.6rem;
 }
+
+.product-card a {
+  text-decoration: none;
+  color: var(--just-white);
+}

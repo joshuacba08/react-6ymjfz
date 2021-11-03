@@ -44,8 +44,30 @@ button {
   width: 112px;
   height: 36px;
   cursor: pointer;
+  transition: all 0.150s ease;
+}
+
+.button-primary:hover{
+  transform: translate(-1px,-1px);
+}
+.button-primary:active{
+  transform: translate(1px,1px);
+}
+
+.button-padding{
+  width: auto;
+  padding: 12px 16px;
+  line-height: 0.5rem;
 }
 
 li {
   list-style: none;
 }
+
+.display-page{
+  padding-top: 160px;
+  min-height: calc(100vh - 158px);
+  text-align: center;
+}
+
+
