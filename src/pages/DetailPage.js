@@ -1,21 +1,21 @@
-import React, { useParams } from 'react-router'
+import React from 'react';
+import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import ItemDetailContainer from '../components/ItemDetailContainer'
+import ItemDetailContainer from '../components/ItemDetailContainer';
 
-import './styles/DetailPage.css'
+import './styles/DetailPage.css';
 
 const DetailPage = () => {
+  let { id } = useParams();
 
-    let { id } = useParams();
+  id = parseInt(id);
 
-    id = parseInt(id);
+  return (
+    <main className="detail-page-container">
+      <ItemDetailContainer id={id} />
+      <Link to="/products"> Volver atrás </Link>
+    </main>
+  );
+};
 
-    return (
-        <main className="detail-page-container">
-            <ItemDetailContainer id={id}/>
-            <Link to="/products" > Volver atrás </Link>
-        </main>
-    )
-}
-
-export default DetailPage
+export default DetailPage;
